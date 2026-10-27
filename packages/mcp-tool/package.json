@@ -1,0 +1,50 @@
+{
+  "name": "@chain-lens/mcp-tool",
+  "version": "0.1.3",
+  "description": "ChainLens MCP tool — discover sellers, request data, check job status from Claude Desktop and other MCP clients.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chain-Lens/ChainLens.git",
+    "directory": "packages/mcp-tool"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "chain-lens",
+    "base",
+    "web3",
+    "agents"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "chain-lens-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "test": "tsx --test 'src/**/*.test.ts'",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "@chain-lens/shared": "^0.0.4",
+    "@chain-lens/sign": "0.0.4",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

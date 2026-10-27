@@ -1,0 +1,20 @@
+{
+  "name": "chain-lens",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -r --parallel --filter @chain-lens/backend --filter @chain-lens/frontend dev",
+    "build": "pnpm --filter @chain-lens/shared build && pnpm --filter @chain-lens/backend build && pnpm --filter @chain-lens/frontend build",
+    "test": "pnpm -r test",
+    "contracts:compile": "pnpm --filter @chain-lens/contracts compile",
+    "contracts:test": "pnpm --filter @chain-lens/contracts test",
+    "db:migrate": "pnpm --filter @chain-lens/backend db:migrate",
+    "db:studio": "pnpm --filter @chain-lens/backend db:studio",
+    "clean": "pnpm -r exec rm -rf dist node_modules .next",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\""
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "prettier": "^3.4.0"
+  }
+}

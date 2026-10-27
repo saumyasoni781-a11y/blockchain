@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+.next/
+out/
+docs/
+!packages/frontend/src/components/docs/
+!packages/frontend/src/components/docs/*.tsx
+release-hardening.md
+.mcp.json
+
+# Environment
+.env
+.env.local
+.env.*.local
+.env.*
+
+# Hardhat
+artifacts/
+cache/
+typechain-types/
+ignition/deployments/
+
+# Prisma
+packages/backend/prisma/migrations/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+
+# Logs
+*.log
+
+# Local-only notes / tool state
+.codex
+caution.md
+AUDIT_REMAINING.md
+docs/BACKLOG.md
+docs/postmortems/
+WORKLOG-*.md
+
+# TypeScript incremental build cache
+*.tsbuildinfo
+.env.test
